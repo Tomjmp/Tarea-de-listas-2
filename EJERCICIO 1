@@ -1,0 +1,15 @@
+#EJERCICIO NO. 1
+numeros = []
+
+for i in range(10):
+    numero = int(input("Ingresa un número: "))
+    numeros.append(numero)
+
+maximo = max(numeros)
+
+posicion = numeros.index(maximo)
+
+print("El número mayor es:", maximo)
+print("La posición del número mayor es:", posicion)
+
+

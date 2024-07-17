@@ -1,0 +1,10 @@
+#EJERICIO NO. 7
+numeros = []
+
+for i in range(10):
+    numero = int(input("Ingresa un número: "))
+    numeros.append(numero)
+
+promedio = sum(numeros) // len(numeros)
+
+print("El promedio entero de los números es:", promedio)

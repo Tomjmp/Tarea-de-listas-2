@@ -1,0 +1,28 @@
+#EJERCICIO NO. 3
+def es_primo(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+numeros = []
+for i in range(10):
+    numero = int(input("Ingresa un número: "))
+    numeros.append(numero)
+
+mayor_primo = None
+posicion_primo = -1
+
+for i, num in enumerate(numeros):
+    if es_primo(num):
+        if mayor_primo is None or num > mayor_primo:
+            mayor_primo = num
+            posicion_primo = i
+
+if mayor_primo is None:
+    print("No se encontraron números primos.")
+else:
+    print("El mayor número primo es:", mayor_primo)
+    print("La posición del mayor número primo es:", posicion_primo)

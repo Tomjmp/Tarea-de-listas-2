@@ -1,0 +1,31 @@
+#EJERCICIO NO. 5
+def es_primo(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def contar_digitos_pares(num):
+    return sum(1 for digito in str(abs(num)) if int(digito) % 2 == 0)
+
+numeros = []
+for i in range(10):
+    numero = int(input("Ingresa un número: "))
+    numeros.append(numero)
+
+mayor_cantidad_pares = -1
+posicion_primo_pares = -1
+
+for i, num in enumerate(numeros):
+    if es_primo(num):
+        cantidad_pares = contar_digitos_pares(num)
+        if cantidad_pares > mayor_cantidad_pares:
+            mayor_cantidad_pares = cantidad_pares
+            posicion_primo_pares = i
+
+if posicion_primo_pares == -1:
+    print("No se encontraron números primos con dígitos pares.")
+else:
+    print("La posición del número primo con más dígitos pares es:", posicion_primo_pares)

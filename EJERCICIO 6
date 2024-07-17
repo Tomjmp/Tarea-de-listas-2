@@ -1,0 +1,14 @@
+#EJERCICIO NO. 6
+numeros = []
+
+for i in range(10):
+    numero = int(input("Ingresa un número: "))
+    numeros.append(numero)
+
+posiciones = []
+
+for i, num in enumerate(numeros):
+    if abs(num) >= 1000:
+        posiciones.append(i)
+
+print("Posiciones de números con más de 3 dígitos:", posiciones)

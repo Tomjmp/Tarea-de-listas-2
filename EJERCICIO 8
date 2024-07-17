@@ -1,0 +1,10 @@
+#EJERCICIO NO. 8
+numeros = []
+
+for i in range(10):
+    numero = int(input("Ingresa un número: "))
+    numeros.append(numero)
+
+numeros_negativos = sum(1 for num in numeros if num < 0)
+
+print("Cantidad de números negativos:", numeros_negativos)

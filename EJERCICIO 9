@@ -1,0 +1,12 @@
+#EJERCICIO NO. 9
+import math
+
+numeros = []
+
+for i in range(10):
+    numero = int(input("Ingresa un número: "))
+    numeros.append(numero)
+
+factoriales = [math.factorial(num) if num >= 0 else None for num in numeros]
+
+print("Factoriales de los números:", factoriales)

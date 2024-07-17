@@ -1,0 +1,12 @@
+#EJERCICIO NO. 10
+numeros = []
+
+for i in range(10):
+    numero = int(input("Ingresa un número: "))
+    numeros.append(numero)
+
+numero_a_verificar = int(input("Ingresa el número para verificar divisores: "))
+
+cantidad_divisores = sum(1 for num in numeros if num != 0 and numero_a_verificar % num == 0)
+
+print("Cantidad de divisores exactos en la lista:", cantidad_divisores)

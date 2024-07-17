@@ -1,0 +1,17 @@
+#EJERCICIO NO. 4
+def es_digito_primo(digito):
+    return digito in [2, 3, 5, 7]
+
+numeros = []
+for i in range(10):
+    numero = int(input("Ingresa un número: "))
+    numeros.append(numero)
+
+contador_primos = 0
+
+for num in numeros:
+    primer_digito = int(str(abs(num))[0])
+    if es_digito_primo(primer_digito):
+        contador_primos += 1
+
+print("Cantidad de números que comienzan con un dígito primo:", contador_primos)
